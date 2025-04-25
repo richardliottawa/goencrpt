@@ -36,6 +36,7 @@ RA93ccNQ+7m1fAIhAOXr8c2QsH2oOYRTbn6bPZjkYQ2jLMaxatKhChBIuyZA
 func main() {
 	keyBlock, certsPEM := pem.Decode(bundle)
 	fmt.Println(reflect.TypeOf(keyBlock))
+	fmt.Println(reflect.TypeOf(certsPEM))
 	fmt.Println(x509.IsEncryptedPEMBlock(keyBlock)) // Output: true
 
 	// Decrypt key
